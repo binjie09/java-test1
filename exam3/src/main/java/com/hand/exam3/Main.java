@@ -9,12 +9,12 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println(list.stream().map(n -> map.get(n % 10).add(n)).toArray());
+        System.out.println(list.stream().map(n -> map.get(n / 10).add(n)).toArray());
 
         System.out.print("{");
         for (int i = 0; i < 10; i++) {
             if (!map.get(i).isEmpty()) {
-                quickSort(map.get(i));
+               // quickSort(map.get(i));
             }
             System.out.print(i + "=>" + map.get(i) + " ");
         }
